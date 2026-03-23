@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comprar Madreñas</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      background: #0b0f1a;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background: #111827;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      background: #facc15;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #eab308;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Comprar Madreñas</h1>
+
+  <form action="https://formspree.io/f/mkqolaol" method="POST">
+    
+    <input type="hidden" name="_subject" value="Nueva compra de madreñas" />
+
+    <label>Nombre completo</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Dirección de envío</label>
+    <input type="text" name="address" required>
+
+    <label>Cantidad</label>
+    <input type="number" name="quantity" min="1" required>
+
+    <input type="hidden" name="product" value="Madreñas Asturianas">
+
+    <button type="submit">Finalizar pedido</button>
+
+  </form>
+
+  <p style="margin-top:20px;">
+    Después de enviar, recibirás confirmación en tu correo.
+  </p>
+
+</body>
+</html>
